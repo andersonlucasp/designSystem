@@ -17,6 +17,8 @@ import { defineCustomElement as defineDsCalendar } from '@ds/components/componen
 import { defineCustomElement as defineDsCard } from '@ds/components/components/ds-card.js';
 import { defineCustomElement as defineDsCheckbox } from '@ds/components/components/ds-checkbox.js';
 import { defineCustomElement as defineDsDivider } from '@ds/components/components/ds-divider.js';
+import { defineCustomElement as defineDsDropdown } from '@ds/components/components/ds-dropdown.js';
+import { defineCustomElement as defineDsDropdownItem } from '@ds/components/components/ds-dropdown-item.js';
 import { defineCustomElement as defineDsHelloWorld } from '@ds/components/components/ds-hello-world.js';
 import { defineCustomElement as defineDsInput } from '@ds/components/components/ds-input.js';
 import { defineCustomElement as defineDsLink } from '@ds/components/components/ds-link.js';
@@ -28,9 +30,11 @@ import { defineCustomElement as defineDsSelect } from '@ds/components/components
 import { defineCustomElement as defineDsSkeleton } from '@ds/components/components/ds-skeleton.js';
 import { defineCustomElement as defineDsSpinner } from '@ds/components/components/ds-spinner.js';
 import { defineCustomElement as defineDsSwitch } from '@ds/components/components/ds-switch.js';
+import { defineCustomElement as defineDsTable } from '@ds/components/components/ds-table.js';
 import { defineCustomElement as defineDsTabs } from '@ds/components/components/ds-tabs.js';
 import { defineCustomElement as defineDsTag } from '@ds/components/components/ds-tag.js';
 import { defineCustomElement as defineDsTextarea } from '@ds/components/components/ds-textarea.js';
+import { defineCustomElement as defineDsToast } from '@ds/components/components/ds-toast.js';
 import { defineCustomElement as defineDsTooltip } from '@ds/components/components/ds-tooltip.js';
 
 
@@ -126,6 +130,24 @@ export const DsCheckbox = /*@__PURE__*/ defineContainer<JSX.DsCheckbox>('ds-chec
 
 export const DsDivider = /*@__PURE__*/ defineContainer<JSX.DsDivider>('ds-divider', defineDsDivider, [
   'orientation'
+]);
+
+
+export const DsDropdown = /*@__PURE__*/ defineContainer<JSX.DsDropdown>('ds-dropdown', defineDsDropdown, [
+  'align',
+  'open',
+  'dsOpenChange'
+], [
+  'dsOpenChange'
+]);
+
+
+export const DsDropdownItem = /*@__PURE__*/ defineContainer<JSX.DsDropdownItem>('ds-dropdown-item', defineDsDropdownItem, [
+  'disabled',
+  'variant',
+  'dsSelect'
+], [
+  'dsSelect'
 ]);
 
 
@@ -240,6 +262,14 @@ export const DsSwitch = /*@__PURE__*/ defineContainer<JSX.DsSwitch>('ds-switch',
 ]);
 
 
+export const DsTable = /*@__PURE__*/ defineContainer<JSX.DsTable>('ds-table', defineDsTable, [
+  'columns',
+  'rows',
+  'caption',
+  'striped'
+]);
+
+
 export const DsTabs = /*@__PURE__*/ defineContainer<JSX.DsTabs>('ds-tabs', defineDsTabs, [
   'tabs',
   'active',
@@ -273,6 +303,16 @@ export const DsTextarea = /*@__PURE__*/ defineContainer<JSX.DsTextarea>('ds-text
   'dsInput'
 ], [
   'dsInput'
+]);
+
+
+export const DsToast = /*@__PURE__*/ defineContainer<JSX.DsToast>('ds-toast', defineDsToast, [
+  'variant',
+  'open',
+  'duration',
+  'dsDismiss'
+], [
+  'dsDismiss'
 ]);
 
 

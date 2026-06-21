@@ -20,6 +20,8 @@ import { DsCalendar as DsCalendarElement, defineCustomElement as defineDsCalenda
 import { DsCard as DsCardElement, defineCustomElement as defineDsCard } from "@ds/components/dist/components/ds-card.js";
 import { DsCheckbox as DsCheckboxElement, defineCustomElement as defineDsCheckbox } from "@ds/components/dist/components/ds-checkbox.js";
 import { DsDivider as DsDividerElement, defineCustomElement as defineDsDivider } from "@ds/components/dist/components/ds-divider.js";
+import { DsDropdownItem as DsDropdownItemElement, defineCustomElement as defineDsDropdownItem } from "@ds/components/dist/components/ds-dropdown-item.js";
+import { DsDropdown as DsDropdownElement, defineCustomElement as defineDsDropdown } from "@ds/components/dist/components/ds-dropdown.js";
 import { DsHelloWorld as DsHelloWorldElement, defineCustomElement as defineDsHelloWorld } from "@ds/components/dist/components/ds-hello-world.js";
 import { DsInput as DsInputElement, defineCustomElement as defineDsInput } from "@ds/components/dist/components/ds-input.js";
 import { DsLink as DsLinkElement, defineCustomElement as defineDsLink } from "@ds/components/dist/components/ds-link.js";
@@ -31,9 +33,11 @@ import { DsSelect as DsSelectElement, defineCustomElement as defineDsSelect } fr
 import { DsSkeleton as DsSkeletonElement, defineCustomElement as defineDsSkeleton } from "@ds/components/dist/components/ds-skeleton.js";
 import { DsSpinner as DsSpinnerElement, defineCustomElement as defineDsSpinner } from "@ds/components/dist/components/ds-spinner.js";
 import { DsSwitch as DsSwitchElement, defineCustomElement as defineDsSwitch } from "@ds/components/dist/components/ds-switch.js";
+import { DsTable as DsTableElement, defineCustomElement as defineDsTable } from "@ds/components/dist/components/ds-table.js";
 import { DsTabs as DsTabsElement, defineCustomElement as defineDsTabs } from "@ds/components/dist/components/ds-tabs.js";
 import { DsTag as DsTagElement, defineCustomElement as defineDsTag } from "@ds/components/dist/components/ds-tag.js";
 import { DsTextarea as DsTextareaElement, defineCustomElement as defineDsTextarea } from "@ds/components/dist/components/ds-textarea.js";
+import { DsToast as DsToastElement, defineCustomElement as defineDsToast } from "@ds/components/dist/components/ds-toast.js";
 import { DsTooltip as DsTooltipElement, defineCustomElement as defineDsTooltip } from "@ds/components/dist/components/ds-tooltip.js";
 import type { EventName, StencilReactComponent } from '@stencil/react-output-target/runtime';
 import { createComponent } from '@stencil/react-output-target/runtime';
@@ -171,6 +175,28 @@ export const DsDivider: StencilReactComponent<DsDividerElement, DsDividerEvents>
     defineCustomElement: defineDsDivider
 });
 
+type DsDropdownEvents = { onDsOpenChange: EventName<CustomEvent<boolean>> };
+
+export const DsDropdown: StencilReactComponent<DsDropdownElement, DsDropdownEvents> = /*@__PURE__*/ createComponent<DsDropdownElement, DsDropdownEvents>({
+    tagName: 'ds-dropdown',
+    elementClass: DsDropdownElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onDsOpenChange: 'dsOpenChange' } as DsDropdownEvents,
+    defineCustomElement: defineDsDropdown
+});
+
+type DsDropdownItemEvents = { onDsSelect: EventName<CustomEvent<void>> };
+
+export const DsDropdownItem: StencilReactComponent<DsDropdownItemElement, DsDropdownItemEvents> = /*@__PURE__*/ createComponent<DsDropdownItemElement, DsDropdownItemEvents>({
+    tagName: 'ds-dropdown-item',
+    elementClass: DsDropdownItemElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onDsSelect: 'dsSelect' } as DsDropdownItemEvents,
+    defineCustomElement: defineDsDropdownItem
+});
+
 type DsHelloWorldEvents = NonNullable<unknown>;
 
 export const DsHelloWorld: StencilReactComponent<DsHelloWorldElement, DsHelloWorldEvents> = /*@__PURE__*/ createComponent<DsHelloWorldElement, DsHelloWorldEvents>({
@@ -298,6 +324,17 @@ export const DsSwitch: StencilReactComponent<DsSwitchElement, DsSwitchEvents> = 
     defineCustomElement: defineDsSwitch
 });
 
+type DsTableEvents = NonNullable<unknown>;
+
+export const DsTable: StencilReactComponent<DsTableElement, DsTableEvents> = /*@__PURE__*/ createComponent<DsTableElement, DsTableEvents>({
+    tagName: 'ds-table',
+    elementClass: DsTableElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as DsTableEvents,
+    defineCustomElement: defineDsTable
+});
+
 type DsTabsEvents = { onDsTabChange: EventName<CustomEvent<string>> };
 
 export const DsTabs: StencilReactComponent<DsTabsElement, DsTabsEvents> = /*@__PURE__*/ createComponent<DsTabsElement, DsTabsEvents>({
@@ -329,6 +366,17 @@ export const DsTextarea: StencilReactComponent<DsTextareaElement, DsTextareaEven
     react: React,
     events: { onDsInput: 'dsInput' } as DsTextareaEvents,
     defineCustomElement: defineDsTextarea
+});
+
+type DsToastEvents = { onDsDismiss: EventName<CustomEvent<void>> };
+
+export const DsToast: StencilReactComponent<DsToastElement, DsToastEvents> = /*@__PURE__*/ createComponent<DsToastElement, DsToastEvents>({
+    tagName: 'ds-toast',
+    elementClass: DsToastElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onDsDismiss: 'dsDismiss' } as DsToastEvents,
+    defineCustomElement: defineDsToast
 });
 
 type DsTooltipEvents = NonNullable<unknown>;

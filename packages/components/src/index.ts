@@ -25,4 +25,8 @@ export { DsSelect } from './components/ds-select/ds-select';
 export { DsTextarea } from './components/ds-textarea/ds-textarea';
 export { DsPagination } from './components/ds-pagination/ds-pagination';
 export { DsCalendar } from './components/ds-calendar/ds-calendar';
+export { DsTable } from './components/ds-table/ds-table';
+export { DsDropdown } from './components/ds-dropdown/ds-dropdown';
+export { DsDropdownItem } from './components/ds-dropdown/ds-dropdown-item';
+export { DsToast } from './components/ds-toast/ds-toast';
 export * from './components';

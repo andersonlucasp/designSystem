@@ -27,6 +27,9 @@ const markup = `
   <ds-textarea label="Comentário" placeholder="Escreva..."></ds-textarea>
   <ds-pagination page="2" total="5"></ds-pagination>
   <ds-calendar value="2026-06-21"></ds-calendar>
+  <ds-table caption="Tabela" columns='[{"key":"a","label":"Coluna A"}]' rows='[{"a":"valor"}]'></ds-table>
+  <ds-dropdown open><ds-button slot="trigger">Menu</ds-button><ds-dropdown-item>Item</ds-dropdown-item></ds-dropdown>
+  <ds-toast variant="info" open duration="0">Notificação</ds-toast>
 </main>
 `;
 

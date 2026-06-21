@@ -14,6 +14,8 @@ export const DIRECTIVES = [
   d.DsCard,
   d.DsCheckbox,
   d.DsDivider,
+  d.DsDropdown,
+  d.DsDropdownItem,
   d.DsHelloWorld,
   d.DsInput,
   d.DsLink,
@@ -25,8 +27,10 @@ export const DIRECTIVES = [
   d.DsSkeleton,
   d.DsSpinner,
   d.DsSwitch,
+  d.DsTable,
   d.DsTabs,
   d.DsTag,
   d.DsTextarea,
+  d.DsToast,
   d.DsTooltip
 ];

@@ -301,6 +301,63 @@ export declare interface DsDivider extends Components.DsDivider {}
 
 
 @ProxyCmp({
+  inputs: ['align', 'open']
+})
+@Component({
+  selector: 'ds-dropdown',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['align', 'open'],
+})
+export class DsDropdown {
+  protected el: HTMLDsDropdownElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['dsOpenChange']);
+  }
+}
+
+
+export declare interface DsDropdown extends Components.DsDropdown {
+  /**
+   * Emitido ao abrir/fechar.
+   */
+  dsOpenChange: EventEmitter<CustomEvent<boolean>>;
+}
+
+
+@ProxyCmp({
+  inputs: ['disabled', 'variant'],
+  methods: ['setFocus']
+})
+@Component({
+  selector: 'ds-dropdown-item',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['disabled', 'variant'],
+})
+export class DsDropdownItem {
+  protected el: HTMLDsDropdownItemElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['dsSelect']);
+  }
+}
+
+
+export declare interface DsDropdownItem extends Components.DsDropdownItem {
+  /**
+   * Emitido ao selecionar.
+   */
+  dsSelect: EventEmitter<CustomEvent<void>>;
+}
+
+
+@ProxyCmp({
   inputs: ['name']
 })
 @Component({
@@ -583,6 +640,28 @@ export declare interface DsSwitch extends Components.DsSwitch {
 
 
 @ProxyCmp({
+  inputs: ['caption', 'columns', 'rows', 'striped']
+})
+@Component({
+  selector: 'ds-table',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['caption', 'columns', 'rows', 'striped'],
+})
+export class DsTable {
+  protected el: HTMLDsTableElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface DsTable extends Components.DsTable {}
+
+
+@ProxyCmp({
   inputs: ['active', 'tabs']
 })
 @Component({
@@ -663,6 +742,34 @@ export declare interface DsTextarea extends Components.DsTextarea {
    * Emitido a cada digitação.
    */
   dsInput: EventEmitter<CustomEvent<string>>;
+}
+
+
+@ProxyCmp({
+  inputs: ['duration', 'open', 'variant']
+})
+@Component({
+  selector: 'ds-toast',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['duration', 'open', 'variant'],
+})
+export class DsToast {
+  protected el: HTMLDsToastElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['dsDismiss']);
+  }
+}
+
+
+export declare interface DsToast extends Components.DsToast {
+  /**
+   * Emitido ao dispensar.
+   */
+  dsDismiss: EventEmitter<CustomEvent<void>>;
 }
 
 

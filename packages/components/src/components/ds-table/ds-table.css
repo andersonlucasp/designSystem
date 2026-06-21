@@ -1,0 +1,6 @@
+:host { display: block; font-family: var(--font-family-sans, Inter, sans-serif); }
+.table { width: 100%; border-collapse: collapse; font-size: var(--font-size-sm, 14px); color: var(--color-text-default, #111827); }
+caption { text-align: left; padding: var(--spacing-2, 8px) 0; color: var(--color-text-secondary, #4b5563); font-size: var(--font-size-sm, 14px); }
+th, td { padding: var(--spacing-2, 8px) var(--spacing-3, 16px); border-bottom: 1px solid var(--color-border-default, #d1d5db); }
+th { font-weight: var(--font-weight-semibold, 600); color: var(--color-text-secondary, #4b5563); background: var(--color-surface-subtle, #f9fafb); }
+.table.striped tbody tr:nth-child(even) { background: var(--color-surface-subtle, #f9fafb); }
