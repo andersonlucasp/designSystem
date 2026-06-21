@@ -1,0 +1,15 @@
+# Donos de código — revisores automáticos por área.
+# Substitua @andersonlucasp pelos handles reais do Core Team conforme o time cresce.
+
+# Tudo, por padrão
+*                           @andersonlucasp
+
+# Tokens e fundações exigem revisão do Core Team
+/packages/tokens/           @andersonlucasp
+
+# API pública dos componentes
+/packages/components/        @andersonlucasp
+
+# Configuração de release/CI
+/.github/                    @andersonlucasp
+/.changeset/                 @andersonlucasp

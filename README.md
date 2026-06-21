@@ -62,3 +62,9 @@ Requer o secret **`NPM_TOKEN`** (npmjs.com → Access Tokens → Automation).
 | Docs | Storybook 8 (web-components-vite) + addon-a11y |
 
 > O componente `ds-hello-world` é apenas um **smoke test** do pipeline (não faz parte do inventário do DS). Os componentes reais entram via Prompt 4, seguindo a Definition of Done do PRD.
+
+## Governança e contribuição
+
+- [GOVERNANCE.md](GOVERNANCE.md) — papéis, fluxo de contribuição, versionamento, depreciação
+- [CONTRIBUTING.md](CONTRIBUTING.md) — como rodar o projeto e criar/alterar componentes
+- [CHANGELOG.md](CHANGELOG.md) — histórico de mudanças

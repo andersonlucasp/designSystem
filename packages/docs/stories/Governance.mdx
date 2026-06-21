@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Visão Geral/Governança" />
+
+# Governança & Processo
+
+Como o Design System é mantido e evolui. Documento completo:
+[GOVERNANCE.md](https://github.com/andersonlucasp/designSystem/blob/main/GOVERNANCE.md).
+
+## Papéis
+
+- **Core Team** — aprova componentes, revisa PRs, cuida dos releases.
+- **Contribuidores** — propõem componentes/mudanças via issue e PR.
+- **Champions de time** — ponto de contato de cada squad consumidora.
+
+## Fluxo de contribuição
+
+1. Abrir **issue** (proposta de componente ou bug).
+2. Triagem do Core Team.
+3. Desenho no Figma (novos componentes) + revisão de design.
+4. Implementação seguindo a **Definition of Done**.
+5. PR → review + CI (build, testes, axe, Chromatic).
+6. Merge → changeset → publicação no npm.
+
+## Critério de inclusão
+
+Um componente entra no DS se for usado por **mais de um time** ou resolver um
+**padrão recorrente** — sempre após auditar o que já existe.
+
+## Versionamento
+
+SemVer automatizado via Changesets. Breaking changes só em versões **major**,
+com aviso prévio e caminho de migração.
+
+## Depreciação
+
+Marcar (`@deprecated`) → manter por ≥1 ciclo major → comunicar → remover só em major.
+
+## Contribuindo
+
+Veja o [CONTRIBUTING.md](https://github.com/andersonlucasp/designSystem/blob/main/CONTRIBUTING.md).
