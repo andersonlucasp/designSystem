@@ -10,6 +10,7 @@
 import { type DsButtonCustomEvent } from "@ds/components";
 import { DsButton as DsButtonElement, defineCustomElement as defineDsButton } from "@ds/components/dist/components/ds-button.js";
 import { DsHelloWorld as DsHelloWorldElement, defineCustomElement as defineDsHelloWorld } from "@ds/components/dist/components/ds-hello-world.js";
+import { DsInput as DsInputElement, defineCustomElement as defineDsInput } from "@ds/components/dist/components/ds-input.js";
 import type { EventName, StencilReactComponent } from '@stencil/react-output-target/runtime';
 import { createComponent } from '@stencil/react-output-target/runtime';
 import React from 'react';
@@ -34,4 +35,21 @@ export const DsHelloWorld: StencilReactComponent<DsHelloWorldElement, DsHelloWor
     react: React,
     events: {} as DsHelloWorldEvents,
     defineCustomElement: defineDsHelloWorld
+});
+
+type DsInputEvents = {
+    onDsInput: EventName<CustomEvent<string>>,
+    onDsChange: EventName<CustomEvent<string>>
+};
+
+export const DsInput: StencilReactComponent<DsInputElement, DsInputEvents> = /*@__PURE__*/ createComponent<DsInputElement, DsInputEvents>({
+    tagName: 'ds-input',
+    elementClass: DsInputElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {
+        onDsInput: 'dsInput',
+        onDsChange: 'dsChange'
+    } as DsInputEvents,
+    defineCustomElement: defineDsInput
 });

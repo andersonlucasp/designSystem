@@ -57,3 +57,35 @@ export class DsHelloWorld {
 export declare interface DsHelloWorld extends Components.DsHelloWorld {}
 
 
+@ProxyCmp({
+  inputs: ['disabled', 'errorMessage', 'helperText', 'invalid', 'label', 'name', 'placeholder', 'required', 'type', 'value']
+})
+@Component({
+  selector: 'ds-input',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['disabled', 'errorMessage', 'helperText', 'invalid', 'label', 'name', 'placeholder', 'required', 'type', 'value'],
+})
+export class DsInput {
+  protected el: HTMLDsInputElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['dsInput', 'dsChange']);
+  }
+}
+
+
+export declare interface DsInput extends Components.DsInput {
+  /**
+   * Emitido a cada digitação, com o valor atual.
+   */
+  dsInput: EventEmitter<CustomEvent<string>>;
+  /**
+   * Emitido ao confirmar a mudança (evento change nativo).
+   */
+  dsChange: EventEmitter<CustomEvent<string>>;
+}
+
+
