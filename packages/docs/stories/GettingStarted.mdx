@@ -1,0 +1,68 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Visão Geral/Início Rápido" />
+
+# Início Rápido
+
+O Design System publica três camadas: os **Web Components** (`@ds/components`),
+os **tokens** (`@ds/tokens`) e os **wrappers por framework**.
+
+## 1. Tokens (todos os frameworks)
+
+Importe as CSS Custom Properties uma vez, no entrypoint da aplicação:
+
+```ts
+import '@ds/tokens/css';
+```
+
+## 2. Web Components puros (qualquer stack)
+
+```ts
+import { defineCustomElements } from '@ds/components/loader';
+defineCustomElements();
+```
+
+```html
+<ds-button variant="primary">Salvar</ds-button>
+```
+
+## 3. React
+
+```tsx
+import { DsButton } from '@ds/react';
+
+export function App() {
+  return <DsButton variant="primary" onDsClick={() => console.log('click')}>Salvar</DsButton>;
+}
+```
+
+## 4. Angular
+
+```ts
+import { DsButton } from '@ds/angular';
+
+@NgModule({ imports: [DsButton] })
+export class AppModule {}
+```
+
+```html
+<ds-button variant="primary" (dsClick)="onSave()">Salvar</ds-button>
+```
+
+## 5. Vue
+
+```ts
+import { DsButton } from '@ds/vue';
+```
+
+```vue
+<template>
+  <ds-button variant="primary" @ds-click="onSave">Salvar</ds-button>
+</template>
+```
+
+## Eventos customizados
+
+Os componentes emitem eventos com prefixo `ds` (`dsClick`, `dsChange`, `dsInput`,
+`dsToggle`, etc.). Consulte a página de cada componente para a API completa
+(props, slots, eventos, shadow parts).

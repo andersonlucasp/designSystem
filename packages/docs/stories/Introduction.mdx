@@ -1,0 +1,36 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Visão Geral/Introdução" />
+
+# Design System — Multi-Stack Web Components
+
+Design System consumível por múltiplos stacks (React, Angular, Vue) usando
+**Web Components (Stencil)** como camada única de componentes, com **design tokens**
+como fonte de verdade.
+
+## Princípios de marca
+
+1. **Clareza** — cada componente comunica seu propósito sem ambiguidade.
+2. **Consistência** — mesma linguagem visual e comportamental em todos os stacks.
+3. **Eficiência** — adotar um componente deve ser mais rápido do que recriá-lo.
+4. **Acessibilidade** — WCAG 2.1 AA como piso, não como extra.
+
+> 🎨 Princípios e fundamentos visuais documentados no Figma:
+> [Design System (Figma)](https://www.figma.com/design/QX6W7BTRYuikstsBtcRpNJ/Design-system)
+
+## Categorias
+
+- **Actions** — Button
+- **Inputs** — Input, Checkbox, Radio, Switch, Select, Textarea
+- **Feedback** — Alert, Badge, Spinner, Progress, Skeleton, Tooltip, Toast
+- **Data display** — Avatar, Tag, Table
+- **Layout** — Card, Divider, Accordion
+- **Navigation** — Breadcrumb, Link, Tabs, Pagination, Dropdown
+- **Overlay** — Modal
+- **Date** — Calendar
+
+## Acessibilidade
+
+Cada componente é validado com **axe-core** (WCAG 2.1 AA) na suíte de testes e no
+addon de acessibilidade deste Storybook. Estados de foco visíveis, navegação por
+teclado e semântica ARIA são requisitos da Definition of Done.

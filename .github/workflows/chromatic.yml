@@ -1,0 +1,36 @@
+name: Chromatic
+
+# Regressão visual: publica o Storybook no Chromatic a cada push/PR.
+# Requer o secret CHROMATIC_PROJECT_TOKEN (criado em https://www.chromatic.com).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  chromatic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Chromatic precisa do histórico completo para comparar baselines
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build tokens and components (deps do Storybook)
+        run: npx nx run-many -t build --projects=tokens,components
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          workingDir: packages/docs
+          buildScriptName: build
+          exitZeroOnChanges: true # não bloqueia o merge por mudanças visuais; revise no Chromatic
