@@ -1,0 +1,30 @@
+{
+  "name": "@ds/docs",
+  "version": "0.1.0",
+  "description": "Documentação viva (Storybook) do Design System",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build": "storybook build -o storybook-static",
+    "build-storybook": "storybook build -o storybook-static"
+  },
+  "dependencies": {
+    "@ds/components": "0.1.0",
+    "@ds/tokens": "0.1.0"
+  },
+  "devDependencies": {
+    "@storybook/web-components-vite": "^8.4.7",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-a11y": "^8.4.7",
+    "lit": "^3.2.0",
+    "storybook": "^8.4.7",
+    "vite": "^5.4.0"
+  },
+  "nx": {
+    "targets": {
+      "build": { "dependsOn": ["^build"], "outputs": ["{projectRoot}/storybook-static"] },
+      "storybook": { "dependsOn": ["^build"] }
+    }
+  }
+}

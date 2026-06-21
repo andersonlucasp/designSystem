@@ -1,0 +1,24 @@
+:host {
+  display: inline-block;
+  font-family: var(--font-family-sans, Inter, system-ui, sans-serif);
+}
+
+.hello {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2, 8px);
+  padding: var(--spacing-2, 8px) var(--spacing-3, 16px);
+  border-radius: var(--radius-md, 8px);
+  background: var(--color-primary-subtle, #eff6ff);
+  border: 1px solid var(--color-border-brand, #3b82f6);
+  color: var(--color-text-brand, #1d4ed8);
+  font-size: var(--font-size-md, 16px);
+  font-weight: var(--font-weight-semibold, 600);
+}
+
+.dot {
+  width: var(--spacing-2, 8px);
+  height: var(--spacing-2, 8px);
+  border-radius: var(--radius-full, 9999px);
+  background: var(--color-primary-default, #2563eb);
+}

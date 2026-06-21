@@ -1,0 +1,28 @@
+{
+  "name": "@ds/react",
+  "version": "0.1.0",
+  "description": "Wrappers React do Design System (gerados pelo Stencil)",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "@ds/components": "0.1.0"
+  },
+  "devDependencies": {
+    "@stencil/react-output-target": "^0.7.1",
+    "@types/react": "^18.3.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
+  "nx": {
+    "targets": { "build": { "dependsOn": ["^build"], "outputs": ["{projectRoot}/dist"] } }
+  }
+}

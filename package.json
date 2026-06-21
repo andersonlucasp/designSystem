@@ -1,0 +1,21 @@
+{
+  "name": "design-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Design System multi-stack com Web Components (Stencil)",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "nx run-many -t build",
+    "build:tokens": "nx run tokens:build",
+    "build:components": "nx run components:build",
+    "storybook": "nx run docs:storybook",
+    "test": "nx run-many -t test"
+  },
+  "devDependencies": {
+    "nx": "^20.3.0",
+    "typescript": "~5.6.3"
+  }
+}

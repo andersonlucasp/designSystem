@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.nx/
+www/
+loader/
+*.log
+.DS_Store
+packages/components/src/components.d.ts
+packages/tokens/build/
+storybook-static/
+
+.claude/settings.local.json
