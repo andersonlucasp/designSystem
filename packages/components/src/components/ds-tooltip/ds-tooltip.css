@@ -1,0 +1,15 @@
+:host { display: inline-block; position: relative; font-family: var(--font-family-sans, Inter, sans-serif); }
+.trigger { display: inline-flex; }
+.tip {
+  position: absolute; z-index: 10; pointer-events: none;
+  background: var(--color-text-default, #111827); color: var(--color-text-inverse, #fff);
+  padding: var(--spacing-1, 4px) var(--spacing-2, 8px); border-radius: var(--radius-sm, 4px);
+  font-size: var(--font-size-xs, 12px); white-space: nowrap;
+  opacity: 0; transition: opacity 0.12s ease; width: max-content; max-width: 240px;
+}
+.tip.open { opacity: 1; }
+:host([placement='top']) .tip { bottom: 100%; left: 50%; transform: translateX(-50%); margin-bottom: 6px; }
+:host([placement='bottom']) .tip { top: 100%; left: 50%; transform: translateX(-50%); margin-top: 6px; }
+:host([placement='left']) .tip { right: 100%; top: 50%; transform: translateY(-50%); margin-right: 6px; }
+:host([placement='right']) .tip { left: 100%; top: 50%; transform: translateY(-50%); margin-left: 6px; }
+@media (prefers-reduced-motion: reduce) { .tip { transition: none; } }

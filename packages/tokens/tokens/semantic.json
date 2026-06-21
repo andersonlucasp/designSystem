@@ -31,6 +31,8 @@
       "inverse":   { "value": "{color.white}" },
       "brand":     { "value": "{color.blue.700}" },
       "danger":    { "value": "{color.red.700}" },
+      "success":   { "value": "{color.green.700}" },
+      "warning":   { "value": "{color.amber.700}" },
       "disabled":  { "value": "{color.gray.400}" }
     },
     "border": {

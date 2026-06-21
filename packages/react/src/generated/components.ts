@@ -8,12 +8,113 @@
 /* eslint-disable */
 
 import { type DsButtonCustomEvent } from "@ds/components";
+import { DsAccordionItem as DsAccordionItemElement, defineCustomElement as defineDsAccordionItem } from "@ds/components/dist/components/ds-accordion-item.js";
+import { DsAccordion as DsAccordionElement, defineCustomElement as defineDsAccordion } from "@ds/components/dist/components/ds-accordion.js";
+import { DsAlert as DsAlertElement, defineCustomElement as defineDsAlert } from "@ds/components/dist/components/ds-alert.js";
+import { DsAvatar as DsAvatarElement, defineCustomElement as defineDsAvatar } from "@ds/components/dist/components/ds-avatar.js";
+import { DsBadge as DsBadgeElement, defineCustomElement as defineDsBadge } from "@ds/components/dist/components/ds-badge.js";
+import { DsBreadcrumbItem as DsBreadcrumbItemElement, defineCustomElement as defineDsBreadcrumbItem } from "@ds/components/dist/components/ds-breadcrumb-item.js";
+import { DsBreadcrumb as DsBreadcrumbElement, defineCustomElement as defineDsBreadcrumb } from "@ds/components/dist/components/ds-breadcrumb.js";
 import { DsButton as DsButtonElement, defineCustomElement as defineDsButton } from "@ds/components/dist/components/ds-button.js";
+import { DsCalendar as DsCalendarElement, defineCustomElement as defineDsCalendar } from "@ds/components/dist/components/ds-calendar.js";
+import { DsCard as DsCardElement, defineCustomElement as defineDsCard } from "@ds/components/dist/components/ds-card.js";
+import { DsCheckbox as DsCheckboxElement, defineCustomElement as defineDsCheckbox } from "@ds/components/dist/components/ds-checkbox.js";
+import { DsDivider as DsDividerElement, defineCustomElement as defineDsDivider } from "@ds/components/dist/components/ds-divider.js";
 import { DsHelloWorld as DsHelloWorldElement, defineCustomElement as defineDsHelloWorld } from "@ds/components/dist/components/ds-hello-world.js";
 import { DsInput as DsInputElement, defineCustomElement as defineDsInput } from "@ds/components/dist/components/ds-input.js";
+import { DsLink as DsLinkElement, defineCustomElement as defineDsLink } from "@ds/components/dist/components/ds-link.js";
+import { DsModal as DsModalElement, defineCustomElement as defineDsModal } from "@ds/components/dist/components/ds-modal.js";
+import { DsPagination as DsPaginationElement, defineCustomElement as defineDsPagination } from "@ds/components/dist/components/ds-pagination.js";
+import { DsProgress as DsProgressElement, defineCustomElement as defineDsProgress } from "@ds/components/dist/components/ds-progress.js";
+import { DsRadio as DsRadioElement, defineCustomElement as defineDsRadio } from "@ds/components/dist/components/ds-radio.js";
+import { DsSelect as DsSelectElement, defineCustomElement as defineDsSelect } from "@ds/components/dist/components/ds-select.js";
+import { DsSkeleton as DsSkeletonElement, defineCustomElement as defineDsSkeleton } from "@ds/components/dist/components/ds-skeleton.js";
+import { DsSpinner as DsSpinnerElement, defineCustomElement as defineDsSpinner } from "@ds/components/dist/components/ds-spinner.js";
+import { DsSwitch as DsSwitchElement, defineCustomElement as defineDsSwitch } from "@ds/components/dist/components/ds-switch.js";
+import { DsTabs as DsTabsElement, defineCustomElement as defineDsTabs } from "@ds/components/dist/components/ds-tabs.js";
+import { DsTag as DsTagElement, defineCustomElement as defineDsTag } from "@ds/components/dist/components/ds-tag.js";
+import { DsTextarea as DsTextareaElement, defineCustomElement as defineDsTextarea } from "@ds/components/dist/components/ds-textarea.js";
+import { DsTooltip as DsTooltipElement, defineCustomElement as defineDsTooltip } from "@ds/components/dist/components/ds-tooltip.js";
 import type { EventName, StencilReactComponent } from '@stencil/react-output-target/runtime';
 import { createComponent } from '@stencil/react-output-target/runtime';
 import React from 'react';
+
+type DsAccordionEvents = NonNullable<unknown>;
+
+export const DsAccordion: StencilReactComponent<DsAccordionElement, DsAccordionEvents> = /*@__PURE__*/ createComponent<DsAccordionElement, DsAccordionEvents>({
+    tagName: 'ds-accordion',
+    elementClass: DsAccordionElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as DsAccordionEvents,
+    defineCustomElement: defineDsAccordion
+});
+
+type DsAccordionItemEvents = { onDsToggle: EventName<CustomEvent<boolean>> };
+
+export const DsAccordionItem: StencilReactComponent<DsAccordionItemElement, DsAccordionItemEvents> = /*@__PURE__*/ createComponent<DsAccordionItemElement, DsAccordionItemEvents>({
+    tagName: 'ds-accordion-item',
+    elementClass: DsAccordionItemElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onDsToggle: 'dsToggle' } as DsAccordionItemEvents,
+    defineCustomElement: defineDsAccordionItem
+});
+
+type DsAlertEvents = { onDsDismiss: EventName<CustomEvent<void>> };
+
+export const DsAlert: StencilReactComponent<DsAlertElement, DsAlertEvents> = /*@__PURE__*/ createComponent<DsAlertElement, DsAlertEvents>({
+    tagName: 'ds-alert',
+    elementClass: DsAlertElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onDsDismiss: 'dsDismiss' } as DsAlertEvents,
+    defineCustomElement: defineDsAlert
+});
+
+type DsAvatarEvents = NonNullable<unknown>;
+
+export const DsAvatar: StencilReactComponent<DsAvatarElement, DsAvatarEvents> = /*@__PURE__*/ createComponent<DsAvatarElement, DsAvatarEvents>({
+    tagName: 'ds-avatar',
+    elementClass: DsAvatarElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as DsAvatarEvents,
+    defineCustomElement: defineDsAvatar
+});
+
+type DsBadgeEvents = NonNullable<unknown>;
+
+export const DsBadge: StencilReactComponent<DsBadgeElement, DsBadgeEvents> = /*@__PURE__*/ createComponent<DsBadgeElement, DsBadgeEvents>({
+    tagName: 'ds-badge',
+    elementClass: DsBadgeElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as DsBadgeEvents,
+    defineCustomElement: defineDsBadge
+});
+
+type DsBreadcrumbEvents = NonNullable<unknown>;
+
+export const DsBreadcrumb: StencilReactComponent<DsBreadcrumbElement, DsBreadcrumbEvents> = /*@__PURE__*/ createComponent<DsBreadcrumbElement, DsBreadcrumbEvents>({
+    tagName: 'ds-breadcrumb',
+    elementClass: DsBreadcrumbElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as DsBreadcrumbEvents,
+    defineCustomElement: defineDsBreadcrumb
+});
+
+type DsBreadcrumbItemEvents = NonNullable<unknown>;
+
+export const DsBreadcrumbItem: StencilReactComponent<DsBreadcrumbItemElement, DsBreadcrumbItemEvents> = /*@__PURE__*/ createComponent<DsBreadcrumbItemElement, DsBreadcrumbItemEvents>({
+    tagName: 'ds-breadcrumb-item',
+    elementClass: DsBreadcrumbItemElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as DsBreadcrumbItemEvents,
+    defineCustomElement: defineDsBreadcrumbItem
+});
 
 type DsButtonEvents = { onDsClick: EventName<DsButtonCustomEvent<MouseEvent>> };
 
@@ -24,6 +125,50 @@ export const DsButton: StencilReactComponent<DsButtonElement, DsButtonEvents> = 
     react: React,
     events: { onDsClick: 'dsClick' } as DsButtonEvents,
     defineCustomElement: defineDsButton
+});
+
+type DsCalendarEvents = { onDsSelect: EventName<CustomEvent<string>> };
+
+export const DsCalendar: StencilReactComponent<DsCalendarElement, DsCalendarEvents> = /*@__PURE__*/ createComponent<DsCalendarElement, DsCalendarEvents>({
+    tagName: 'ds-calendar',
+    elementClass: DsCalendarElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onDsSelect: 'dsSelect' } as DsCalendarEvents,
+    defineCustomElement: defineDsCalendar
+});
+
+type DsCardEvents = NonNullable<unknown>;
+
+export const DsCard: StencilReactComponent<DsCardElement, DsCardEvents> = /*@__PURE__*/ createComponent<DsCardElement, DsCardEvents>({
+    tagName: 'ds-card',
+    elementClass: DsCardElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as DsCardEvents,
+    defineCustomElement: defineDsCard
+});
+
+type DsCheckboxEvents = { onDsChange: EventName<CustomEvent<boolean>> };
+
+export const DsCheckbox: StencilReactComponent<DsCheckboxElement, DsCheckboxEvents> = /*@__PURE__*/ createComponent<DsCheckboxElement, DsCheckboxEvents>({
+    tagName: 'ds-checkbox',
+    elementClass: DsCheckboxElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onDsChange: 'dsChange' } as DsCheckboxEvents,
+    defineCustomElement: defineDsCheckbox
+});
+
+type DsDividerEvents = NonNullable<unknown>;
+
+export const DsDivider: StencilReactComponent<DsDividerElement, DsDividerEvents> = /*@__PURE__*/ createComponent<DsDividerElement, DsDividerEvents>({
+    tagName: 'ds-divider',
+    elementClass: DsDividerElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as DsDividerEvents,
+    defineCustomElement: defineDsDivider
 });
 
 type DsHelloWorldEvents = NonNullable<unknown>;
@@ -52,4 +197,147 @@ export const DsInput: StencilReactComponent<DsInputElement, DsInputEvents> = /*@
         onDsChange: 'dsChange'
     } as DsInputEvents,
     defineCustomElement: defineDsInput
+});
+
+type DsLinkEvents = NonNullable<unknown>;
+
+export const DsLink: StencilReactComponent<DsLinkElement, DsLinkEvents> = /*@__PURE__*/ createComponent<DsLinkElement, DsLinkEvents>({
+    tagName: 'ds-link',
+    elementClass: DsLinkElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as DsLinkEvents,
+    defineCustomElement: defineDsLink
+});
+
+type DsModalEvents = { onDsClose: EventName<CustomEvent<void>> };
+
+export const DsModal: StencilReactComponent<DsModalElement, DsModalEvents> = /*@__PURE__*/ createComponent<DsModalElement, DsModalEvents>({
+    tagName: 'ds-modal',
+    elementClass: DsModalElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onDsClose: 'dsClose' } as DsModalEvents,
+    defineCustomElement: defineDsModal
+});
+
+type DsPaginationEvents = { onDsPageChange: EventName<CustomEvent<number>> };
+
+export const DsPagination: StencilReactComponent<DsPaginationElement, DsPaginationEvents> = /*@__PURE__*/ createComponent<DsPaginationElement, DsPaginationEvents>({
+    tagName: 'ds-pagination',
+    elementClass: DsPaginationElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onDsPageChange: 'dsPageChange' } as DsPaginationEvents,
+    defineCustomElement: defineDsPagination
+});
+
+type DsProgressEvents = NonNullable<unknown>;
+
+export const DsProgress: StencilReactComponent<DsProgressElement, DsProgressEvents> = /*@__PURE__*/ createComponent<DsProgressElement, DsProgressEvents>({
+    tagName: 'ds-progress',
+    elementClass: DsProgressElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as DsProgressEvents,
+    defineCustomElement: defineDsProgress
+});
+
+type DsRadioEvents = { onDsChange: EventName<CustomEvent<string | undefined>> };
+
+export const DsRadio: StencilReactComponent<DsRadioElement, DsRadioEvents> = /*@__PURE__*/ createComponent<DsRadioElement, DsRadioEvents>({
+    tagName: 'ds-radio',
+    elementClass: DsRadioElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onDsChange: 'dsChange' } as DsRadioEvents,
+    defineCustomElement: defineDsRadio
+});
+
+type DsSelectEvents = { onDsChange: EventName<CustomEvent<string>> };
+
+export const DsSelect: StencilReactComponent<DsSelectElement, DsSelectEvents> = /*@__PURE__*/ createComponent<DsSelectElement, DsSelectEvents>({
+    tagName: 'ds-select',
+    elementClass: DsSelectElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onDsChange: 'dsChange' } as DsSelectEvents,
+    defineCustomElement: defineDsSelect
+});
+
+type DsSkeletonEvents = NonNullable<unknown>;
+
+export const DsSkeleton: StencilReactComponent<DsSkeletonElement, DsSkeletonEvents> = /*@__PURE__*/ createComponent<DsSkeletonElement, DsSkeletonEvents>({
+    tagName: 'ds-skeleton',
+    elementClass: DsSkeletonElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as DsSkeletonEvents,
+    defineCustomElement: defineDsSkeleton
+});
+
+type DsSpinnerEvents = NonNullable<unknown>;
+
+export const DsSpinner: StencilReactComponent<DsSpinnerElement, DsSpinnerEvents> = /*@__PURE__*/ createComponent<DsSpinnerElement, DsSpinnerEvents>({
+    tagName: 'ds-spinner',
+    elementClass: DsSpinnerElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as DsSpinnerEvents,
+    defineCustomElement: defineDsSpinner
+});
+
+type DsSwitchEvents = { onDsChange: EventName<CustomEvent<boolean>> };
+
+export const DsSwitch: StencilReactComponent<DsSwitchElement, DsSwitchEvents> = /*@__PURE__*/ createComponent<DsSwitchElement, DsSwitchEvents>({
+    tagName: 'ds-switch',
+    elementClass: DsSwitchElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onDsChange: 'dsChange' } as DsSwitchEvents,
+    defineCustomElement: defineDsSwitch
+});
+
+type DsTabsEvents = { onDsTabChange: EventName<CustomEvent<string>> };
+
+export const DsTabs: StencilReactComponent<DsTabsElement, DsTabsEvents> = /*@__PURE__*/ createComponent<DsTabsElement, DsTabsEvents>({
+    tagName: 'ds-tabs',
+    elementClass: DsTabsElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onDsTabChange: 'dsTabChange' } as DsTabsEvents,
+    defineCustomElement: defineDsTabs
+});
+
+type DsTagEvents = { onDsRemove: EventName<CustomEvent<void>> };
+
+export const DsTag: StencilReactComponent<DsTagElement, DsTagEvents> = /*@__PURE__*/ createComponent<DsTagElement, DsTagEvents>({
+    tagName: 'ds-tag',
+    elementClass: DsTagElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onDsRemove: 'dsRemove' } as DsTagEvents,
+    defineCustomElement: defineDsTag
+});
+
+type DsTextareaEvents = { onDsInput: EventName<CustomEvent<string>> };
+
+export const DsTextarea: StencilReactComponent<DsTextareaElement, DsTextareaEvents> = /*@__PURE__*/ createComponent<DsTextareaElement, DsTextareaEvents>({
+    tagName: 'ds-textarea',
+    elementClass: DsTextareaElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onDsInput: 'dsInput' } as DsTextareaEvents,
+    defineCustomElement: defineDsTextarea
+});
+
+type DsTooltipEvents = NonNullable<unknown>;
+
+export const DsTooltip: StencilReactComponent<DsTooltipElement, DsTooltipEvents> = /*@__PURE__*/ createComponent<DsTooltipElement, DsTooltipEvents>({
+    tagName: 'ds-tooltip',
+    elementClass: DsTooltipElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as DsTooltipEvents,
+    defineCustomElement: defineDsTooltip
 });

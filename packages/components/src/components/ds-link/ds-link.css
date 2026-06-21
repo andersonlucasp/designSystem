@@ -1,0 +1,9 @@
+:host { display: inline; font-family: var(--font-family-sans, Inter, sans-serif); }
+.link {
+  color: var(--color-text-brand, #1d4ed8); text-decoration: underline;
+  text-underline-offset: 2px; border-radius: var(--radius-sm, 4px);
+}
+.link:hover { color: var(--color-primary-hover, #1d4ed8); }
+.link:focus-visible { outline: 2px solid var(--color-border-brand, #3b82f6); outline-offset: 2px; }
+:host([variant='subtle']) .link { color: var(--color-text-secondary, #4b5563); text-decoration: none; }
+:host([variant='subtle']) .link:hover { text-decoration: underline; }

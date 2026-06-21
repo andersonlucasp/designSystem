@@ -1,0 +1,17 @@
+:host { display: inline-block; font-family: var(--font-family-sans, Inter, sans-serif); }
+.tag {
+  display: inline-flex; align-items: center; gap: var(--spacing-1, 4px);
+  padding: 2px var(--spacing-2, 8px); border-radius: var(--radius-sm, 4px);
+  font-size: var(--font-size-sm, 14px); font-weight: var(--font-weight-medium, 500);
+}
+.remove {
+  border: none; background: transparent; cursor: pointer; color: inherit;
+  font-size: 1.1em; line-height: 1; padding: 0 2px; border-radius: var(--radius-sm, 4px);
+}
+.remove:hover { background: rgba(0,0,0,0.08); }
+.remove:focus-visible { outline: 2px solid var(--color-border-brand, #3b82f6); outline-offset: 1px; }
+:host([variant='neutral']) .tag { background: var(--color-surface-muted, #f3f4f6); color: var(--color-text-secondary, #4b5563); }
+:host([variant='primary']) .tag { background: var(--color-primary-subtle, #eff6ff); color: var(--color-text-brand, #1d4ed8); }
+:host([variant='success']) .tag { background: var(--color-success-subtle, #f0fdf4); color: var(--color-text-success, #15803d); }
+:host([variant='danger']) .tag  { background: var(--color-danger-subtle, #fef2f2); color: var(--color-text-danger, #b91c1c); }
+:host([variant='warning']) .tag { background: var(--color-warning-subtle, #fffbeb); color: var(--color-text-warning, #b45309); }

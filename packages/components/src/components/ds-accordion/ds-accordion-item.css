@@ -1,0 +1,15 @@
+:host { display: block; font-family: var(--font-family-sans, Inter, sans-serif); border-bottom: 1px solid var(--color-border-default, #d1d5db); }
+.header { margin: 0; }
+.trigger {
+  display: flex; align-items: center; justify-content: space-between; width: 100%;
+  padding: var(--spacing-3, 16px); background: transparent; border: none; cursor: pointer;
+  font-size: var(--font-size-md, 16px); font-weight: var(--font-weight-medium, 500);
+  color: var(--color-text-default, #111827); text-align: left;
+}
+.trigger:hover { background: var(--color-surface-subtle, #f9fafb); }
+.trigger:focus-visible { outline: 2px solid var(--color-border-brand, #3b82f6); outline-offset: -2px; }
+.trigger:disabled { color: var(--color-text-disabled, #9ca3af); cursor: not-allowed; }
+.chevron { transition: transform 0.15s ease; }
+:host([open]) .chevron { transform: rotate(180deg); }
+.panel-inner { padding: 0 var(--spacing-3, 16px) var(--spacing-3, 16px); color: var(--color-text-secondary, #4b5563); font-size: var(--font-size-sm, 14px); }
+@media (prefers-reduced-motion: reduce) { .chevron { transition: none; } }

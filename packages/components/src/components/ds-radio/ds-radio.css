@@ -1,0 +1,7 @@
+:host { display: inline-block; font-family: var(--font-family-sans, Inter, sans-serif); }
+.wrapper { display: inline-flex; align-items: center; gap: var(--spacing-2, 8px); cursor: pointer; }
+.control { width: 18px; height: 18px; margin: 0; cursor: pointer; accent-color: var(--color-primary-default, #2563eb); }
+.control:focus-visible { outline: 2px solid var(--color-border-brand, #3b82f6); outline-offset: 2px; }
+.label { font-size: var(--font-size-md, 16px); color: var(--color-text-default, #111827); }
+:host([disabled]) .wrapper { cursor: not-allowed; }
+:host([disabled]) .label { color: var(--color-text-disabled, #9ca3af); }

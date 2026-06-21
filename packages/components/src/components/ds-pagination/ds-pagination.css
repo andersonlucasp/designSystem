@@ -1,0 +1,13 @@
+:host { display: block; font-family: var(--font-family-sans, Inter, sans-serif); }
+.pagination { display: inline-flex; align-items: center; gap: var(--spacing-1, 4px); }
+.btn {
+  min-width: 36px; height: 36px; padding: 0 var(--spacing-2, 8px);
+  border: 1px solid var(--color-border-default, #d1d5db); background: var(--color-surface-default, #fff);
+  border-radius: var(--radius-md, 8px); cursor: pointer; font-size: var(--font-size-sm, 14px);
+  color: var(--color-text-default, #111827);
+}
+.btn:hover:not(:disabled):not(.active) { background: var(--color-surface-subtle, #f9fafb); }
+.btn.active { background: var(--color-primary-default, #2563eb); border-color: var(--color-primary-default, #2563eb); color: var(--color-text-inverse, #fff); }
+.btn:disabled { color: var(--color-text-disabled, #9ca3af); cursor: not-allowed; }
+.btn:focus-visible { outline: 2px solid var(--color-border-brand, #3b82f6); outline-offset: 1px; }
+.ellipsis { padding: 0 var(--spacing-1, 4px); color: var(--color-text-muted, #6b7280); }

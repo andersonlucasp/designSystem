@@ -1,0 +1,12 @@
+:host { display: block; font-family: var(--font-family-sans, Inter, sans-serif); }
+.divider { display: flex; align-items: center; gap: var(--spacing-2, 8px); width: 100%; }
+.line { flex: 1; height: 1px; background: var(--color-border-default, #d1d5db); }
+.label { color: var(--color-text-muted, #6b7280); font-size: var(--font-size-sm, 14px); }
+.label:empty { display: none; }
+.label:empty ~ .line, .label:empty:first-child { } /* no-op */
+/* When no label, collapse the two lines into one continuous rule */
+.divider:has(.label:empty) .line:first-child { flex: 1; }
+
+:host([orientation='vertical']) { display: inline-block; height: 100%; }
+:host([orientation='vertical']) .divider { flex-direction: column; height: 100%; }
+:host([orientation='vertical']) .line { width: 1px; height: auto; flex: 1; }
