@@ -1,5 +1,5 @@
 {
-  "name": "@ds/docs",
+  "name": "@andersonlucasp/docs",
   "version": "0.1.0",
   "description": "Documentação viva (Storybook) do Design System",
   "private": true,
@@ -11,8 +11,8 @@
     "chromatic": "chromatic --build-script-name build --exit-zero-on-changes"
   },
   "dependencies": {
-    "@ds/components": "0.1.0",
-    "@ds/tokens": "0.1.0"
+    "@andersonlucasp/components": "0.1.0",
+    "@andersonlucasp/tokens": "0.1.0"
   },
   "devDependencies": {
     "@storybook/web-components-vite": "^8.4.7",

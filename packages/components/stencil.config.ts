@@ -29,13 +29,13 @@ export const config: Config = {
       outDir: '../react/src/generated',
     }),
     angularOutputTarget({
-      componentCorePackage: '@ds/components',
+      componentCorePackage: '@andersonlucasp/components',
       outputType: 'component',
       directivesProxyFile: '../angular/src/generated/components.ts',
       directivesArrayFile: '../angular/src/generated/index.ts',
     }),
     vueOutputTarget({
-      componentCorePackage: '@ds/components',
+      componentCorePackage: '@andersonlucasp/components',
       proxiesFile: '../vue/src/generated/components.ts',
       includeImportCustomElements: true,
     }),

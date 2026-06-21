@@ -1,5 +1,5 @@
 {
-  "name": "@ds/components",
+  "name": "@andersonlucasp/components",
   "version": "0.1.0",
   "description": "Web Components do Design System (Stencil)",
   "license": "MIT",
@@ -39,7 +39,7 @@
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
-    "@ds/tokens": "0.1.0"
+    "@andersonlucasp/tokens": "0.1.0"
   },
   "devDependencies": {
     "@stencil/core": "^4.22.3",

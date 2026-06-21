@@ -1,5 +1,5 @@
 {
-  "name": "@ds/angular",
+  "name": "@andersonlucasp/angular",
   "version": "0.1.0",
   "description": "Wrappers Angular do Design System (gerados pelo Stencil)",
   "license": "MIT",
@@ -16,7 +16,7 @@
     "@angular/common": ">=16"
   },
   "dependencies": {
-    "@ds/components": "0.1.0"
+    "@andersonlucasp/components": "0.1.0"
   },
   "devDependencies": {
     "@stencil/angular-output-target": "^0.10.1",

@@ -1,5 +1,5 @@
 {
-  "name": "@ds/react",
+  "name": "@andersonlucasp/react",
   "version": "0.1.0",
   "description": "Wrappers React do Design System (gerados pelo Stencil)",
   "license": "MIT",
@@ -16,7 +16,7 @@
     "react-dom": ">=18"
   },
   "dependencies": {
-    "@ds/components": "0.1.0"
+    "@andersonlucasp/components": "0.1.0"
   },
   "devDependencies": {
     "@stencil/react-output-target": "^0.7.1",

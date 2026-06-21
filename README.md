@@ -49,7 +49,7 @@ No CI, o workflow [`release.yml`](.github/workflows/release.yml) abre um PR
 Requer o secret **`NPM_TOKEN`** (npmjs.com → Access Tokens → Automation).
 
 > Os 5 pacotes (`tokens`, `components`, `react`, `angular`, `vue`) têm versão
-> sincronizada (grupo `fixed`); `@ds/docs` não é publicado.
+> sincronizada (grupo `fixed`); `@andersonlucasp/docs` não é publicado (local apenas).
 
 ## Stack
 

@@ -1,8 +1,8 @@
 import type { Preview } from '@storybook/web-components';
-// Tokens globais (CSS Custom Properties) — fonte: @ds/tokens
-import '@ds/tokens/css';
+// Tokens globais (CSS Custom Properties) — fonte: @andersonlucasp/tokens
+import '@andersonlucasp/tokens/css';
 // Registra os custom elements do DS
-import { defineCustomElements } from '@ds/components/loader';
+import { defineCustomElements } from '@andersonlucasp/components/loader';
 
 defineCustomElements();
 

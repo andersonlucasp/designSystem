@@ -3,39 +3,39 @@
 /* auto-generated vue proxies */
 import { defineContainer } from '@stencil/vue-output-target/runtime';
 
-import type { JSX } from '@ds/components';
+import type { JSX } from '@andersonlucasp/components';
 
-import { defineCustomElement as defineDsAccordion } from '@ds/components/components/ds-accordion.js';
-import { defineCustomElement as defineDsAccordionItem } from '@ds/components/components/ds-accordion-item.js';
-import { defineCustomElement as defineDsAlert } from '@ds/components/components/ds-alert.js';
-import { defineCustomElement as defineDsAvatar } from '@ds/components/components/ds-avatar.js';
-import { defineCustomElement as defineDsBadge } from '@ds/components/components/ds-badge.js';
-import { defineCustomElement as defineDsBreadcrumb } from '@ds/components/components/ds-breadcrumb.js';
-import { defineCustomElement as defineDsBreadcrumbItem } from '@ds/components/components/ds-breadcrumb-item.js';
-import { defineCustomElement as defineDsButton } from '@ds/components/components/ds-button.js';
-import { defineCustomElement as defineDsCalendar } from '@ds/components/components/ds-calendar.js';
-import { defineCustomElement as defineDsCard } from '@ds/components/components/ds-card.js';
-import { defineCustomElement as defineDsCheckbox } from '@ds/components/components/ds-checkbox.js';
-import { defineCustomElement as defineDsDivider } from '@ds/components/components/ds-divider.js';
-import { defineCustomElement as defineDsDropdown } from '@ds/components/components/ds-dropdown.js';
-import { defineCustomElement as defineDsDropdownItem } from '@ds/components/components/ds-dropdown-item.js';
-import { defineCustomElement as defineDsHelloWorld } from '@ds/components/components/ds-hello-world.js';
-import { defineCustomElement as defineDsInput } from '@ds/components/components/ds-input.js';
-import { defineCustomElement as defineDsLink } from '@ds/components/components/ds-link.js';
-import { defineCustomElement as defineDsModal } from '@ds/components/components/ds-modal.js';
-import { defineCustomElement as defineDsPagination } from '@ds/components/components/ds-pagination.js';
-import { defineCustomElement as defineDsProgress } from '@ds/components/components/ds-progress.js';
-import { defineCustomElement as defineDsRadio } from '@ds/components/components/ds-radio.js';
-import { defineCustomElement as defineDsSelect } from '@ds/components/components/ds-select.js';
-import { defineCustomElement as defineDsSkeleton } from '@ds/components/components/ds-skeleton.js';
-import { defineCustomElement as defineDsSpinner } from '@ds/components/components/ds-spinner.js';
-import { defineCustomElement as defineDsSwitch } from '@ds/components/components/ds-switch.js';
-import { defineCustomElement as defineDsTable } from '@ds/components/components/ds-table.js';
-import { defineCustomElement as defineDsTabs } from '@ds/components/components/ds-tabs.js';
-import { defineCustomElement as defineDsTag } from '@ds/components/components/ds-tag.js';
-import { defineCustomElement as defineDsTextarea } from '@ds/components/components/ds-textarea.js';
-import { defineCustomElement as defineDsToast } from '@ds/components/components/ds-toast.js';
-import { defineCustomElement as defineDsTooltip } from '@ds/components/components/ds-tooltip.js';
+import { defineCustomElement as defineDsAccordion } from '@andersonlucasp/components/components/ds-accordion.js';
+import { defineCustomElement as defineDsAccordionItem } from '@andersonlucasp/components/components/ds-accordion-item.js';
+import { defineCustomElement as defineDsAlert } from '@andersonlucasp/components/components/ds-alert.js';
+import { defineCustomElement as defineDsAvatar } from '@andersonlucasp/components/components/ds-avatar.js';
+import { defineCustomElement as defineDsBadge } from '@andersonlucasp/components/components/ds-badge.js';
+import { defineCustomElement as defineDsBreadcrumb } from '@andersonlucasp/components/components/ds-breadcrumb.js';
+import { defineCustomElement as defineDsBreadcrumbItem } from '@andersonlucasp/components/components/ds-breadcrumb-item.js';
+import { defineCustomElement as defineDsButton } from '@andersonlucasp/components/components/ds-button.js';
+import { defineCustomElement as defineDsCalendar } from '@andersonlucasp/components/components/ds-calendar.js';
+import { defineCustomElement as defineDsCard } from '@andersonlucasp/components/components/ds-card.js';
+import { defineCustomElement as defineDsCheckbox } from '@andersonlucasp/components/components/ds-checkbox.js';
+import { defineCustomElement as defineDsDivider } from '@andersonlucasp/components/components/ds-divider.js';
+import { defineCustomElement as defineDsDropdown } from '@andersonlucasp/components/components/ds-dropdown.js';
+import { defineCustomElement as defineDsDropdownItem } from '@andersonlucasp/components/components/ds-dropdown-item.js';
+import { defineCustomElement as defineDsHelloWorld } from '@andersonlucasp/components/components/ds-hello-world.js';
+import { defineCustomElement as defineDsInput } from '@andersonlucasp/components/components/ds-input.js';
+import { defineCustomElement as defineDsLink } from '@andersonlucasp/components/components/ds-link.js';
+import { defineCustomElement as defineDsModal } from '@andersonlucasp/components/components/ds-modal.js';
+import { defineCustomElement as defineDsPagination } from '@andersonlucasp/components/components/ds-pagination.js';
+import { defineCustomElement as defineDsProgress } from '@andersonlucasp/components/components/ds-progress.js';
+import { defineCustomElement as defineDsRadio } from '@andersonlucasp/components/components/ds-radio.js';
+import { defineCustomElement as defineDsSelect } from '@andersonlucasp/components/components/ds-select.js';
+import { defineCustomElement as defineDsSkeleton } from '@andersonlucasp/components/components/ds-skeleton.js';
+import { defineCustomElement as defineDsSpinner } from '@andersonlucasp/components/components/ds-spinner.js';
+import { defineCustomElement as defineDsSwitch } from '@andersonlucasp/components/components/ds-switch.js';
+import { defineCustomElement as defineDsTable } from '@andersonlucasp/components/components/ds-table.js';
+import { defineCustomElement as defineDsTabs } from '@andersonlucasp/components/components/ds-tabs.js';
+import { defineCustomElement as defineDsTag } from '@andersonlucasp/components/components/ds-tag.js';
+import { defineCustomElement as defineDsTextarea } from '@andersonlucasp/components/components/ds-textarea.js';
+import { defineCustomElement as defineDsToast } from '@andersonlucasp/components/components/ds-toast.js';
+import { defineCustomElement as defineDsTooltip } from '@andersonlucasp/components/components/ds-tooltip.js';
 
 
 export const DsAccordion = /*@__PURE__*/ defineContainer<JSX.DsAccordion>('ds-accordion', defineDsAccordion, [
