@@ -7,10 +7,23 @@
 
 /* eslint-disable */
 
+import { type DsButtonCustomEvent } from "@ds/components";
+import { DsButton as DsButtonElement, defineCustomElement as defineDsButton } from "@ds/components/dist/components/ds-button.js";
 import { DsHelloWorld as DsHelloWorldElement, defineCustomElement as defineDsHelloWorld } from "@ds/components/dist/components/ds-hello-world.js";
-import type { StencilReactComponent } from '@stencil/react-output-target/runtime';
+import type { EventName, StencilReactComponent } from '@stencil/react-output-target/runtime';
 import { createComponent } from '@stencil/react-output-target/runtime';
 import React from 'react';
+
+type DsButtonEvents = { onDsClick: EventName<DsButtonCustomEvent<MouseEvent>> };
+
+export const DsButton: StencilReactComponent<DsButtonElement, DsButtonEvents> = /*@__PURE__*/ createComponent<DsButtonElement, DsButtonEvents>({
+    tagName: 'ds-button',
+    elementClass: DsButtonElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onDsClick: 'dsClick' } as DsButtonEvents,
+    defineCustomElement: defineDsButton
+});
 
 type DsHelloWorldEvents = NonNullable<unknown>;
 

@@ -10,3 +10,5 @@ packages/tokens/build/
 storybook-static/
 
 .claude/settings.local.json
+chrome-headless-shell/
+.cache/
