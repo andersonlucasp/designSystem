@@ -1,13 +1,18 @@
 {
   "name": "@ds/vue",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Wrappers Vue do Design System (gerados pelo Stencil)",
   "license": "MIT",
-  "publishConfig": { "access": "public" },
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json"
   },
@@ -15,13 +20,22 @@
     "vue": ">=3"
   },
   "dependencies": {
-    "@ds/components": "0.1.0"
+    "@ds/components": "0.2.0"
   },
   "devDependencies": {
     "@stencil/vue-output-target": "^0.9.0",
     "vue": "^3.4.0"
   },
   "nx": {
-    "targets": { "build": { "dependsOn": ["^build"], "outputs": ["{projectRoot}/dist"] } }
+    "targets": {
+      "build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          "{projectRoot}/dist"
+        ]
+      }
+    }
   }
 }
