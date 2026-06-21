@@ -2,6 +2,8 @@
   "name": "@ds/react",
   "version": "0.1.0",
   "description": "Wrappers React do Design System (gerados pelo Stencil)",
+  "license": "MIT",
+  "publishConfig": { "access": "public" },
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

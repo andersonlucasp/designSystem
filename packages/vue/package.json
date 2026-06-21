@@ -2,6 +2,8 @@
   "name": "@ds/vue",
   "version": "0.1.0",
   "description": "Wrappers Vue do Design System (gerados pelo Stencil)",
+  "license": "MIT",
+  "publishConfig": { "access": "public" },
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

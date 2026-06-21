@@ -29,6 +29,28 @@ npm run build:components # Stencil + geração de wrappers
 npm run storybook        # Storybook em dev (porta 6006)
 ```
 
+## Publicação (npm + Changesets)
+
+O versionamento é semântico e automatizado com [Changesets](https://github.com/changesets/changesets).
+
+```bash
+# 1. Ao terminar uma mudança, registre o impacto (patch/minor/major):
+npm run changeset
+
+# 2. (CI) Aplica as versões e atualiza os CHANGELOGs dos pacotes:
+npm run version-packages
+
+# 3. (CI) Builda e publica os pacotes no npm:
+npm run release
+```
+
+No CI, o workflow [`release.yml`](.github/workflows/release.yml) abre um PR
+"Version Packages" a cada push na `main`; ao mergeá-lo, publica no npm.
+Requer o secret **`NPM_TOKEN`** (npmjs.com → Access Tokens → Automation).
+
+> Os 5 pacotes (`tokens`, `components`, `react`, `angular`, `vue`) têm versão
+> sincronizada (grupo `fixed`); `@ds/docs` não é publicado.
+
 ## Stack
 
 | Camada | Ferramenta |

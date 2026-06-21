@@ -12,9 +12,13 @@
     "build:tokens": "nx run tokens:build",
     "build:components": "nx run components:build",
     "storybook": "nx run docs:storybook",
-    "test": "nx run-many -t test"
+    "test": "nx run-many -t test",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "nx run-many -t build --projects=tokens,components,react,angular,vue && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.31.0",
     "nx": "^20.3.0",
     "typescript": "~5.6.3"
   }
